@@ -1,4 +1,5 @@
-# play-vuecli3
+# flexible-pc-full-screen
+> demo for a flexible pc full screen page, which keep aspect ratio for any screen
 
 ## Project setup
 ```
