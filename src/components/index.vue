@@ -90,6 +90,7 @@
     color: white;
     right: 30px;
     border-radius: 8px;
+    color: #E9D70C;
   }
 
 </style>
