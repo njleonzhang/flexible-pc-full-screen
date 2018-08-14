@@ -8,7 +8,8 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "vue": "^2.5.17"
+    "vue": "^2.5.17",
+    "vue-echarts": "^3.0.9"
   },
   "devDependencies": {
     "@njleonzhang/postcss-px-to-rem": "^1.0.1",

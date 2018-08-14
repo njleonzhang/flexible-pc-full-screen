@@ -8,55 +8,133 @@
     right: 0;
     width: 1920px;
     height: 1080px;
-    background: yellow;
+
+    & > div {
+      position: absolute;
+      border: solid 1px rgba(255, 255, 255, 0.2);
+    }
   }
 
-  .top {
-    width: 1920px;
-    height: 850px;
-    background: blue;
-    display: flex;
-    flex-direction: row;
+  .title {
+    top: 50px;
+    left: 30px;
+    font-size: 40px;
+    color: white;
   }
 
-  .top-left, .top-right {
-    flex: 0 0 420px;
-    height: 100%;
-    background: purple;
+  .doughnut {
+    top: 150px;
+    left: 30px;
+    width: 400px;
+    height: 300px;
+    border: solid 1px rgba(255, 255, 255, 0.2);
   }
 
-  .top-mid {
-    flex: 1 0 auto;
-    height: 100%;
-    background: green;
+  .point {
+    top: 470px;
+    left: 30px;
+    width: 400px;
+    height: 370px;
+    border: solid 1px rgba(255, 255, 255, 0.2);
   }
 
-  .down {
-    width: 1920px;
-    height: 230px;
-    background: red;
+  .line {
+    left: 30px;
+    bottom: 35px;
+    width: 555px;
+    height: 148px;
+  }
+
+  .map {
+    left: 550px;
+    top: 152px;
+    width: 850px;
+    height: 715px;
+  }
+
+  .bar {
+    left: 680px;
+    bottom: 35px;
+    width: 555px;
+    height: 148px;
+  }
+
+  .pie-char {
+    right:30px;
+    top: 100px;
+    width: 390px;
+    height: 300px;
+    border: solid 1px rgba(255, 255, 255, 0.2);
+  }
+
+  .gauge {
+    top: 420px;
+    right: 30px;
+    width: 390px;
+    height: 420px;
+    border: solid 1px rgba(255, 255, 255, 0.2);
+  }
+
+  .double-line {
+    right: 30px;
+    bottom: 35px;
+    width: 555px;
+    height: 148px;
   }
 
 </style>
 <template>
   <div class='dashboard'>
-    <div class='top'>
-      <div class='top-left'></div>
-      <div class='top-mid'></div>
-      <div class='top-right'></div>
+    <div class='title'>Dashboard</div>
+    <div class='doughnut'>
+      <doughnut></doughnut>
     </div>
-    <div class='down'>
-
+    <div class='point'>
+      <point></point>
+    </div>
+    <div class='line'>
+      <line-chart></line-chart>
+    </div>
+    <div class='line-y-ca'></div>
+    <div class='map'>
+      <Map></Map>
+    </div>
+    <div class='bar'>
+      <bar></bar>
+    </div>
+    <div class='pie-char'>
+      <pie></pie>
+    </div>
+    <div class='gauge'>
+      <gauge></gauge>
+    </div>
+    <div class='double-line'>
+      <double-line></double-line>
     </div>
   </div>
 </template>
 
 <script>
+import Doughnut from '@/components/charts/Doughnut'
+import Point from '@/components/charts/Point'
+import LineChart from '@/components/charts/Line'
+import Map from '@/components/charts/Map'
+import Bar from '@/components/charts/Bar'
+import Pie from '@/components/charts/Pie'
+import Gauge from '@/components/charts/Gauge'
+import DoubleLine from '@/components/charts/DoubleLine'
+
 export default {
-  // async beforeRouteEnter(to, from, next) {
-  //   next(vm => {
-  //   })
-  // },
+  components: {
+    Doughnut,
+    Point,
+    Map,
+    LineChart,
+    Bar,
+    Pie,
+    Gauge,
+    DoubleLine
+  },
   data() {
     return {
       isFullScreen: false,
