@@ -82,10 +82,21 @@
     height: 148px;
   }
 
+  .fullscreen-button {
+    top: 20px;
+    width: 200px;
+    height: 40px;
+    font-size: 25px;
+    color: white;
+    right: 30px;
+    border-radius: 8px;
+  }
+
 </style>
 <template>
   <div class='dashboard'>
     <div class='title'>Dashboard</div>
+    <div class='fullscreen-button' @click='toggleFullscreen'>toggle fullscreen</div>
     <div class='doughnut'>
       <doughnut></doughnut>
     </div>
@@ -138,18 +149,14 @@ export default {
   data() {
     return {
       isFullScreen: false,
-      bar: 'bar',
-      line: 'line',
-      activeUserData: []
     }
   },
   methods: {
-    fullScreen() {
-      let dashBoardEle = document.getElementsByClassName('dash-board')
+    toggleFullscreen() {
       if (this.isFullScreen) {
         this.exitFullScreen()
       } else {
-        this.launchFullScreen(dashBoardEle[0])
+        this.launchFullScreen(document.documentElement)
       }
       this.isFullScreen = !this.isFullScreen
     },
