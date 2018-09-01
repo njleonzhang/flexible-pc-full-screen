@@ -3,6 +3,8 @@
 
 Based on [postcss-px-to-rem](https://github.com/QuellingBlade/postcss-px-to-rem) and [lib-flexible-for-dashboard](https://github.com/QuellingBlade/lib-flexible-for-dashboard)
 
+introduce：https://www.njleonzhang.com/2018/08/15/flexible-pc-full-screen.html
+
 ## Project setup
 ```
 npm install
